@@ -1,0 +1,120 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header #wishlist svg path {
+  stroke:#9A031E !important;
+}
+header #cart svg path {
+  fill:#9A031E !important;
+}
+header #menu svg path {
+  fill:#000 !important;
+}
+
+/*  */
+.wishlist{
+  width:100%;
+  height:110px;
+  margin-top:75px;
+  background:url('../img/Frame\ 17.png');
+	padding: 0 100px;
+}
+.wishlist h1{
+  font-family:'Lora',serif;
+  color:#554E44;
+  padding:3%;
+	padding-left:0;
+	font-weight: 600;
+}
+
+.wishlist h2{
+  font-family: 'Open Sans', sans-serif;
+  color:#554E44;
+  padding:3%;
+	padding-right: 0;
+	font-size: 16px;
+	font-weight: 550;
+}
+.headings{
+  display:flex;
+  justify-content:space-between;
+	align-items: center;
+	height: 100%;
+}
+
+
+.main{
+  display:grid;
+  margin-top:180px;
+  grid-template-columns: 70% 30%;
+  padding-left:100px;
+  padding-right:100px;
+  margin-bottom:30%;
+
+}
+.div1{
+
+  padding-right:4%;
+
+}
+
+
+ tr td img{
+  float:left;
+}
+ th{
+  padding-bottom:5%;
+
+}
+table tr:first-child {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+}
+td{
+  padding-top:5%;
+}
+
+img.table-image {
+  width: 17%;
+}
+
+.text{
+  padding-top:10%;
+  padding-left:30%;
+}
+.others{
+  text-align:center;
+}
+button{
+  padding:5% 20%;
+  background-color:#E09F3E;
+  border:none;
+  color:white;
+}
+
+hr{
+  border:none;
+  width:10%;
+  height:2px;
+  background:red;
+  margin-left:30%;
+  /* grid-column:1/5; */
+}
+.woman{
+  width:100%;
+
+}
+

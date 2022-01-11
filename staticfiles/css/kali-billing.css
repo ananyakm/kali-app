@@ -1,0 +1,197 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+
+
+.bill-head {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.checkout{
+  width:100%;
+  height:110px;
+  margin-top:75px;
+  background:url('../img/Frame 17.png');
+	padding: 0 100px;
+}
+.checkout h1{
+  font-family:'Lora',serif;
+  color:#554E44;
+  padding:3%;
+	padding-left:0;
+	font-weight: 600;
+}
+
+.checkout h2{
+  font-family: 'Open Sans', sans-serif;
+  color:#554E44;
+  padding:3%;
+	padding-right: 0;
+	font-size: 16px;
+	font-weight: 550;
+}
+.headings{
+  display:flex;
+  justify-content:space-between;
+	align-items: center;
+	height: 100%;
+}
+.main{
+  display:grid;
+  margin-top:80px;
+  margin-bottom:15%;
+  grid-template-columns: 70% 30%;
+  padding-left:100px;
+  padding-right:100px;
+  color:#808080;
+}
+.div1{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2% 5%;
+  padding-right:4%;
+
+}
+#addressbox
+{
+  grid-column:1/3;
+  padding:1
+
+}
+
+h4{
+  grid-column:1/3;
+}
+
+.group-1{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  padding-bottom:15px;
+  padding-top:15px;
+}
+.group-1:last-of-type {
+  border-bottom: none;
+}
+.group-2{
+  display:grid;
+  grid-template-rows:1fr 1fr 1fr;
+  grid-column:1/3;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  padding-top:15px;
+}
+.subgroup{
+  display:flex;
+  justify-content:space-between;
+  grid-column:1/3;
+  margin-bottom: 15px;
+}
+
+.highlight{
+  color:rgba(0, 0, 0, 0.80);
+}
+label[for=address]{
+  margin-bottom:20%;
+
+}
+.textbox{
+  grid-column:1/3;
+  width:100%;
+}
+
+
+input[type=text]{
+  width:100%;
+  padding:16px 15px;
+  border:1px solid rgba(0,0,0,0.25);
+
+}
+select{
+  width:100%;
+  padding:16px 15px;
+  border:1px solid rgba(0,0,0,0.25);
+
+}
+.textbox{
+  grid-column:1/3;
+}
+.div2{
+  background-color:	#F6F6F6;
+  padding:40px;
+  height: fit-content;
+}
+hr{
+  grid-column:1/3;
+    border:none;
+    width:100%;
+    height:1px;
+    background:#808080;
+
+}
+#confirm{
+  background-color: #303030;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.back {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #303030;
+  border:2px solid #303030;
+}
+textarea{
+    border:1px solid rgba(0,0,0,0.25);
+    padding: 16px 15px;
+}
+
+
+
+.highlight {
+
+  font-family: 'Open Sans',sans-serif;
+}
+h4.highlight {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+h5.highlight {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+.form-elements {
+  margin-bottom: 15px;
+}
+
+
+.form-elements label {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+#finalprice {
+  font-size: 28px;
+}
+
+
+.razorpay-payment-button {
+  display: none;
+}

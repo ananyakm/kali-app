@@ -1,0 +1,108 @@
+@media only screen and (max-width:1366px){
+  .main{
+    display:grid;
+    margin-top:150px;
+    grid-template-columns:70% 30%;
+    padding-left:80px;
+    padding-right:80px;
+  }
+  .woman{
+    height:100%;
+    width:100%;
+  }
+  .text{
+    padding-top:10%;
+    padding-left:32%;
+    
+  }
+
+
+}
+@media only screen and (max-width:768px){
+  .main{
+    display:grid;
+    margin-top:80px;
+    grid-template-columns:1fr;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  .div2{
+    padding-top:20%;
+  }
+  .wishlist h1{
+    font-style:'Lora',serif;
+    color:#554E44;
+    padding:8%;
+    padding-left:7.5%;
+      font-size:28px;
+
+  }
+
+  .wishlist h2{
+    font-style:'Lora',serif;
+    color:#554E44;
+      padding:10%;
+      font-size:17px;
+  }
+  .headings{
+    display:flex;
+    justify-content:space-between;
+  }
+  p{
+    font-size:13px;
+  }
+  .others{
+    font-size:12.5px;
+  }
+  table{
+    border-collapse:seperate;
+    border-spacing:0 30px;
+  }
+  .text{
+    padding-top:13%;
+    padding-left:45%;
+    font-size:12.5px;
+  }
+  .wishlist{
+    padding:0 1px;
+  }
+  .woman{
+    max-height:800px;
+    object-fit: cover;
+    object-position:top;
+  }
+  tr td img{
+    width:60px;
+  }
+}
+@media only screen and (max-width:411px){
+  .main{
+    display:grid;
+    margin-top:80px;
+    grid-template-columns:100%;
+    padding-left:20px;
+    padding-right:20px;
+  }
+  .div2{
+    padding-top:20%;
+  }
+  td{
+    font-size: 2px;
+  }
+  .text{
+    padding-top:13%;
+    padding-left:60%;
+  }
+  button{
+    padding:5% 10%;
+}
+.wishlist{
+  padding:0 5px;
+}
+.woman{
+  max-height:400px;
+  object-fit: cover;
+  object-position:top;
+}
+
+}

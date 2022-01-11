@@ -1,0 +1,121 @@
+@media only screen and (max-width:1366px){
+  .main{
+    grid-template-columns:2fr 1fr;
+    padding-left:80px;
+    padding-right:80px;
+  }
+  input[type=text]
+  {
+    border:1px solid rgba(0,0,0,0.5);
+  }
+  select{
+    border:1px solid rgba(0,0,0,0.5);
+  }
+  textarea{
+    border:1px solid rgba(0,0,0,0.5);
+  }
+}
+@media only screen and (max-width:768px)
+{
+  .main{
+    grid-template-columns:100%;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  .div1{
+    margin-bottom:20%;
+    padding-right: 0%;
+  }
+  .div2{
+    font-size:15px;
+  }
+  .checkout h1{
+    font-style:'Lora',serif;
+    color:#554E44;
+    padding:8%;
+    padding-left:7.5%;
+      font-size:28px;
+
+  }
+
+  .checkout h2{
+    font-style:'Lora',serif;
+    color:#554E44;
+      padding:10%;
+      font-size:17px;
+  }
+  .checkout{
+      padding:0 10px;
+  }
+  .headings{
+    display:flex;
+    justify-content:space-between;
+  }
+
+    input[type=text]
+    {
+      border:1px solid rgba(0,0,0,0.5);
+    }
+    select{
+      border:1px solid rgba(0,0,0,0.5);
+    }
+    textarea{
+      border:1px solid rgba(0,0,0,0.5);
+    }
+    .bill-head {
+      margin-bottom: 0;
+    }
+
+}
+@media only screen and (max-width:500px)
+{
+  .main{
+    grid-template-columns:1fr;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top: 50px;
+  }
+  .div1{
+    margin-bottom:20%;
+    display: block;
+  }
+  .div2 {
+    padding: 30px;
+  }
+  .checkout h1{
+    font-style:'Lora',serif;
+    color:#554E44;
+    padding:8%;
+    padding-left:7.5%;
+      font-size:28px;
+
+  }
+
+  .checkout h2{
+    font-style:'Lora',serif;
+    color:#554E44;
+      padding:10%;
+      font-size:17px;
+  }
+  .checkout{
+      padding:0 10px;
+  }
+  .headings{
+    display:flex;
+    justify-content:space-between;
+  }
+  input[type=text]
+  {
+    border:1px solid rgba(0,0,0,0.5);
+    padding: 10px;
+  }
+  select{
+    border:1px solid rgba(0,0,0,0.5);
+  }
+  textarea{
+    border:1px solid rgba(0,0,0,0.5);
+  }
+  .form-elements label {
+    font-size: 14px;
+  }
+}
