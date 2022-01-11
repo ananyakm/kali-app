@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing Page-1</title>
+      <link rel="stylesheet" type="text/css" href="{% static 'css/kali-billing.css'%}">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/billing-responsive.css'%}">
+
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+
+    <div class="checkout">
+      <div class="headings"><h1>Checkout</h1><h2>Home / Cart</h2></div>
+    </div>
+
+
+
+    <form class="main" method="post" enctype="multipart/form-data" >
+      {% csrf_token %}
+      <h3 class="bill-head">Billing Details</h3> <br><br>
+      <div class="div1">
+      <div class="form-elements">
+      <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname" value="{{firstname}}">
+      </div>
+
+      <div class="form-elements">
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" id="lastname" value="{{lastname}}">
+    </div>
+
+      <div class="form-elements">
+      <label for="slct1">Country</label>
+      <input type="text" name="country" value="{{country.0}}" id="country" readonly>
+      </div>
+
+      <div class="form-elements">
+      <label for="state">State</label>
+      <input type="text" name="state" value="{{state}}" id="state">
+      </div>
+
+    <div id="addressbox" class="form-elements">
+      <label for="address">Address</label>
+      <textarea id="address" class="textbox" rows="6" cols="4" name="addressline">{{addressline}}</textarea>
+    </div>
+
+    <div class="form-elements">
+      <label for="emailaddress">Email address</label>
+      <input id="emailaddress" name="email" type="text" value="{{email}}"></input>
+    </div>
+
+    <div class="form-elements">
+      <label for="phonenumber">Phone Number</label>
+      <input type="text" name="phone" id="phone" value="{{phone}}">
+    </div>
+
+      <div id="addressbox" class="form-elements">
+      <label for="ordernotes">Order Notes(optional)</label>
+      <textarea id="ordernotes" name="ordernotes" class="textbox" rows="6" cols="4" placeholder="eg, any note for delivery"></textarea>
+    </div>
+
+
+      </div>
+      <div class="div2">
+          <h4 class="highlight">Cart Total</h4>
+          <div class="group-1">
+          <h5 class="highlight">Product</h5>
+          <h5 class="highlight">Total</h5>
+          </div>
+        {% for i,j,k in l1 %}
+        <div class="group-1">
+          <p>{{i.title}} X {{j}}</p>
+          <p>Rs. {{i.final_price}}</p>
+        </div>
+        {% endfor %}
+        {% for i,j,k in l2 %}
+        <div class="group-1">
+          <p>{{i.title}} X {{j}}</p>
+          <p>Rs. {{i.price}}</p>
+        </div>
+        {% endfor %}
+          <div class="group-2">
+          <div class="subgroup">
+            <h5 class="highlight">Subtotal</h5>
+          <h5 class="highlight">Rs. {{subtotal}}</h5>
+        </div>
+        <div class="subgroup">
+          <h5 class="highlight">Shipping</h5>
+          <h5 class="highlight">Rs. {{country.1}}</h5>
+        </div>
+        <!--
+        <div class="subgroup">
+          <h4>Discount</h5>
+          <h4>Rs. 5000</h5>
+        </div>
+      -->
+        </div>
+          <div class="group-1">
+          <h5 class="highlight">Total</h5>
+          <h5 class="highlight" id="finalprice">Rs. {{total}}</h5>
+        </div>
+        <button type="submit" id="confirm">CONFIRM DETAILS</button>
+        <button type="button" name="button" class="back">BACK TO CART</button>
+
+
+
+      </div>
+    </form>
+
+  </body>
+  <script src="{% static 'js/billing.js'%}"></script>
+</html>

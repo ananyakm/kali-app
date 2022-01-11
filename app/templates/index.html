@@ -1,0 +1,420 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<link rel="stylesheet" href="{% static 'css/landingpage-1920.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/landingpage-768.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/header-footer.css' %}" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>KALI</title>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header>
+			<a href="{% url 'index' %}" id="logo">KALI</a>
+
+			<div class="nav-links-1">
+				<a href="#">About</a>
+				<a href="{% url 'collectionspage'  %}All">Shop</a>
+				<a href="#">Customize</a>
+				<a href="#">Festivals</a>
+			</div>
+
+			<div class="nav-links-2">
+				<a href="{% url 'wishlistPage'  %}" id="wishlist">
+					<svg
+						width="516"
+						height="482"
+						viewBox="0 0 516 482"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M257.987 66.9678C183.856 -21.168 20 21.0092 20 162.977C20 238.881 71.6682 293.983 121.595 337.381C134.05 348.207 146.763 358.599 158.901 368.52L159.626 369.112C172.077 379.29 183.864 388.939 194.657 398.432C216.663 417.785 232.308 434.639 239.945 450.623C243.267 457.574 250.286 462 257.991 462C265.695 462 272.715 457.574 276.037 450.623C283.674 434.639 299.319 417.786 321.327 398.432C332.121 388.94 343.909 379.291 356.361 369.113L357.09 368.517C369.227 358.597 381.94 348.207 394.395 337.382C444.326 293.984 496 238.882 496 162.977C496 21.1724 332.171 -21.3103 257.987 66.9678Z"
+							stroke="white"
+							stroke-width="40"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</a>
+				<a href="{% url 'cartpage'  %}" id="cart">
+					<svg
+						width="432"
+						height="512"
+						viewBox="0 0 432 512"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M432 452C432 463.046 423.046 472 412 472H392V492C392 503.046 383.046 512 372 512C360.954 512 352 503.046 352 492V472H332C320.954 472 312 463.046 312 452C312 440.954 320.954 432 332 432H352V412C352 400.954 360.954 392 372 392C383.046 392 392 400.954 392 412V432H412C423.046 432 432 440.954 432 452ZM432 140V332C432 343.046 423.046 352 412 352C400.954 352 392 343.046 392 332V160H352V220C352 231.046 343.046 240 332 240C320.954 240 312 231.046 312 220V160H120V220C120 231.046 111.046 240 100 240C88.954 240 80 231.046 80 220V160H40V472H252C263.046 472 272 480.954 272 492C272 503.046 263.046 512 252 512H20C8.954 512 0 503.046 0 492V140C0 128.954 8.954 120 20 120H80.946C88.891 52.523 146.423 0 216 0C285.577 0 343.109 52.523 351.054 120H412C423.046 120 432 128.954 432 140ZM310.659 120C303.019 74.655 263.483 40 216 40C168.517 40 128.981 74.655 121.341 120H310.659Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+				<a id="menu">
+					<svg
+						width="24"
+						height="18"
+						viewBox="0 0 24 18"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M0.560156 0.414328C0.80625 0.28589 1.09219 0.313547 1.36031 0.312141C8.56266 0.312609 15.7645 0.312609 22.9664 0.312141C23.4909 0.284953 23.9709 0.723703 24 1.24636V1.37105C23.9756 1.89558 23.4938 2.33902 22.9678 2.3123C15.6563 2.3123 8.34422 2.3123 1.03266 2.3123C0.51 2.33902 0.0295312 1.90261 0 1.38136V1.2337C0.031875 0.888234 0.245156 0.564797 0.560156 0.414328Z"
+							fill="white"
+						/>
+						<path
+							d="M0 8.90755C0.0309375 8.38912 0.507656 7.95505 1.0275 7.97849C8.34234 7.97802 15.6572 7.97755 22.9716 7.97849C23.49 7.95458 23.9625 8.38443 24 8.89959V9.0463C23.97 9.54693 23.5247 9.98053 23.0198 9.97678C15.6741 9.97865 8.32781 9.97865 0.982031 9.97724C0.480938 9.98146 0.0365625 9.5549 0 9.05802V8.90755Z"
+							fill="white"
+						/>
+						<path
+							d="M0 16.5648C0.0375 16.0684 0.481875 15.6413 0.983906 15.6479C8.32687 15.646 15.6703 15.646 23.0133 15.6479C23.5134 15.6399 23.9541 16.0613 24 16.554V16.7218C23.9681 17.0645 23.76 17.3865 23.4487 17.5384C23.1853 17.6785 22.8787 17.6438 22.5919 17.6471C15.5147 17.6471 8.4375 17.6466 1.36078 17.6471C1.10109 17.6452 0.826875 17.6705 0.585469 17.5552C0.261094 17.4118 0.0384375 17.086 0 16.7359V16.5648Z"
+							fill="white"
+						/>
+					</svg>
+				</a>
+			</div>
+		</header>
+
+		<div class="main-body">
+			<div class="main-body-left">
+				<div class="main-body-left-contents topdown">
+					<h1 class="main-body-left-heading">PICK YOUR PERFECT</h1>
+					<p>Sarees | Suits</p>
+					<p class="discount-landing-page">
+						upto <span class="discount-value"> 40% </span>
+						off.
+					</p>
+					<button
+						class="shop-now"
+						onclick=window.location.href="{% url 'collectionspage'  %}All">
+						SHOP NOW
+					</button>
+				</div>
+				<div class="main-body-left-contents topdown">
+					<h1 class="main-body-left-heading alt-heading">
+						We will stitch <br />
+						your blouse.
+					</h1>
+					<p>Get away with the hassle of get your blouse stiched.</p>
+					<button class="shop-now">TRY NOW</button>
+				</div>
+				<div class="main-body-left-contents topdown">
+					<h1 class="main-body-left-heading alt-heading">Kali by you.</h1>
+					<p>We will help you making a design that will suit you.</p>
+					<button class="shop-now">LEARN MORE</button>
+				</div>
+				<div class="down-button-div">
+					<button class="up-down-button" onclick="plusSlides(1)">
+						<!-- <img src="./img/down-button.svg" alt="" /> -->
+						<svg
+							class="up-down-button"
+							width="60"
+							height="60"
+							viewBox="0 0 71 71"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								x="2"
+								y="2"
+								width="67"
+								height="67"
+								fill="none"
+								stroke="#E1AD60"
+								stroke-width="4"
+							/>
+							<path
+								d="M33.9393 50.0607C34.5251 50.6464 35.4749 50.6464 36.0607 50.0607L45.6066 40.5147C46.1924 39.9289 46.1924 38.9792 45.6066 38.3934C45.0208 37.8076 44.0711 37.8076 43.4853 38.3934L35 46.8787L26.5147 38.3934C25.9289 37.8076 24.9792 37.8076 24.3934 38.3934C23.8076 38.9792 23.8076 39.9289 24.3934 40.5147L33.9393 50.0607ZM33.5 21L33.5 49H36.5L36.5 21H33.5Z"
+								fill="#E1AD60"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+			<div class="main-body-right">
+				<div class="main-body-right-img-gallery fromBottomToTop">
+					<img
+						src="{% static 'img/image-1-new.jpg' %}"
+						alt=""
+						class="landing-page-gallery-1"
+					/>
+				</div>
+				<div class="main-body-right-img-gallery fromBottomToTop">
+					<img
+						src="{% static 'img/image-1-new.jpg' %}"
+						alt=""
+						class="landing-page-gallery-1"
+					/>
+				</div>
+				<div class="main-body-right-img-gallery fromBottomToTop">
+					<img
+						src="{% static 'img/image-1-new.jpg' %}"
+						alt=""
+						class="landing-page-gallery-1"
+					/>
+				</div>
+				<div class="up-button-div">
+					<button class="up-down-button" onclick="plusSlides(-1)">
+						<!-- <img src="./img/up-button.svg" alt="" /> -->
+						<svg
+							class="up-down-button"
+							width="60"
+							height="60"
+							viewBox="0 0 71 71"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect
+								x="2"
+								y="2"
+								width="67"
+								height="67"
+								fill="none"
+								stroke="#E1AD60"
+								stroke-width="4"
+							/>
+							<path
+								d="M37.0607 20.9393C36.4749 20.3536 35.5251 20.3536 34.9393 20.9393L25.3934 30.4853C24.8076 31.0711 24.8076 32.0208 25.3934 32.6066C25.9792 33.1924 26.9289 33.1924 27.5147 32.6066L36 24.1213L44.4853 32.6066C45.0711 33.1924 46.0208 33.1924 46.6066 32.6066C47.1924 32.0208 47.1924 31.0711 46.6066 30.4853L37.0607 20.9393ZM37.5 50L37.5 22H34.5L34.5 50H37.5Z"
+								fill="#E1AD60"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="dot-container">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+		</div>
+
+		<div class="second-main-body main-body">
+			<div class="second-main-body-left">
+				<img
+					src="{% static 'img/image-2.jpg' %}"
+					alt=""
+					class="landing-page-gallery-2"
+				/>
+			</div>
+			<div class="main-body-right second-main-body-right">
+				<div class="second-main-content">
+					<h1 class="designer-heading">DESIGNER SAREES</h1>
+					<p class="">
+						Test Lorem Ipsum is simply dummy text of the printing and
+						typesetting industry. Lorem Ipsum has been the industry's standard
+						dummy text ever since the 1500s, when an unknown printer took a
+						galley of type and scrambled it to make a type specimen book.
+					</p>
+					<button
+						class="view-more "
+						onclick=window.location.href="{% url 'collectionspage'  %}Saree">
+						View More
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="third-main-body">
+			<div class="image-body">
+				<img src="{% static 'img/image-3.jpg' %}" alt="" />
+				<div class="image-overlay-text">
+					<div class="image-overlay-content">
+						<h1 class="designer-heading">DESIGNER SUITS</h1>
+						<p>Get away with the hassle of get your blouse stiched.</p>
+						<button
+							class="view-more-2"
+							onclick=window.location.href="{% url 'collectionspage'  %}Suits"
+						>
+							View More
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="trending-section-heading">
+			<h1>Trending Section</h1>
+			<p>
+				Get away with the hassle of get your blouse stiched. Get away with the
+				hassle of get yourblouse stiched.Get away with the hassle of get your
+			</p>
+		</div>
+
+		<div class="trending-section">
+			<div class="sale-section">
+				<img src="{% static 'img/image-4.png' %}" alt="" class="sales-img" />
+				<div class="img-overlay-text-2">
+					<div class="img-text-2">
+						<span class="sale-section-heading">SALE</span>
+						<span class="sale-section-content">upto 40% off</span>
+						<button
+							class="view-more view-more-2"
+							onclick=window.location.href="{% url 'collectionspage'  %}All"
+						>
+							VIEW COLLECTIONS
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="grid-section">
+				<div class="recommendations">
+					<div class="recommended-images">
+						{% for saree in saree_obj %}
+						<div class="rec-imgs">
+							<img src="{{ saree.image1.url }}" alt="" />
+							<div class="img-overlay-text">
+								<div class="img-text">{{ saree.title }}</div>
+								<div class="hidden-overlay">
+									<div class="icon-buttons">
+										<button
+											type="button"
+											id="addToWishlist"
+											class="icon-btn"
+											data-id="{{saree.id}}"
+										>
+											<svg
+												width="516"
+												height="482"
+												viewBox="0 0 516 482"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M257.987 66.9678C183.856 -21.168 20 21.0092 20 162.977C20 238.881 71.6682 293.983 121.595 337.381C134.05 348.207 146.763 358.599 158.901 368.52L159.626 369.112C172.077 379.29 183.864 388.939 194.657 398.432C216.663 417.785 232.308 434.639 239.945 450.623C243.267 457.574 250.286 462 257.991 462C265.695 462 272.715 457.574 276.037 450.623C283.674 434.639 299.319 417.786 321.327 398.432C332.121 388.94 343.909 379.291 356.361 369.113L357.09 368.517C369.227 358.597 381.94 348.207 394.395 337.382C444.326 293.984 496 238.882 496 162.977C496 21.1724 332.171 -21.3103 257.987 66.9678Z"
+													stroke="white"
+													stroke-width="40"
+													stroke-linejoin="round"
+												/>
+											</svg>
+										</button>
+										<button
+											type="button"
+											id="addToCart"
+											class="icon-btn"
+											data-id="{{saree.id}}"
+										>
+											<svg
+												width="432"
+												height="512"
+												viewBox="0 0 432 512"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M432 452C432 463.046 423.046 472 412 472H392V492C392 503.046 383.046 512 372 512C360.954 512 352 503.046 352 492V472H332C320.954 472 312 463.046 312 452C312 440.954 320.954 432 332 432H352V412C352 400.954 360.954 392 372 392C383.046 392 392 400.954 392 412V432H412C423.046 432 432 440.954 432 452ZM432 140V332C432 343.046 423.046 352 412 352C400.954 352 392 343.046 392 332V160H352V220C352 231.046 343.046 240 332 240C320.954 240 312 231.046 312 220V160H120V220C120 231.046 111.046 240 100 240C88.954 240 80 231.046 80 220V160H40V472H252C263.046 472 272 480.954 272 492C272 503.046 263.046 512 252 512H20C8.954 512 0 503.046 0 492V140C0 128.954 8.954 120 20 120H80.946C88.891 52.523 146.423 0 216 0C285.577 0 343.109 52.523 351.054 120H412C423.046 120 432 128.954 432 140ZM310.659 120C303.019 74.655 263.483 40 216 40C168.517 40 128.981 74.655 121.341 120H310.659Z"
+													fill="white"
+												/>
+											</svg>
+										</button>
+									</div>
+									<div class="hidden-text">{{ saree.title }}</div>
+									<button type="button" class="view-btn" onclick=window.location.href="{% url 'product' saree.id %}">View</button>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="view-all-btn">
+			<button
+				class="view-more"
+				onclick=window.location.href="{% url 'collectionspage'  %}All">
+				VIEW ALL
+			</button>
+		</div>
+
+		<div class="fourth-main-body main-body">
+			<div class="fourth-main-body-left">
+				<div class="fourth-main-body-content">
+					<h1 class="fourth-main-heading">
+						<span class="kali-heading">KALI</span> by you.
+					</h1>
+					<p class="">
+						Lorem Ipsum is simply dummy text of the printing and typesetting
+						industry. Lorem Ipsum has been the industry's standard
+					</p>
+					<button class="view-more">LEARN MORE</button>
+				</div>
+			</div>
+			<div class="fourth-main-body-right">
+				<img
+					src="{% static 'img/image-7.png' %}"
+					alt=""
+					class="landing-page-gallery-3"
+				/>
+			</div>
+		</div>
+
+		<div class="fifth-main-body main-body">
+			<div class="fifth-main-body-left">
+				<div class="fourth-main-body-right">
+					<img
+						src="{% static 'img/image-8.png' %}"
+						alt=""
+						class="landing-page-gallery-4"
+					/>
+				</div>
+			</div>
+			<div class="fifth-main-body-right">
+				<h1 class="fifth-main-heading">
+					We will notify you on several occasions.
+				</h1>
+
+				<form id="input-field-div">
+					<input
+						class="input-field"
+						id="input-field"
+						name="email-field"
+						type="text"
+						placeholder="Type your email.."
+					/><button class="submit-btn" onclick="SubForm()">NOTIFY</button>
+					<!-- <button class="notify-btn" id="notify-btn">Notify</button>  type="Notify" placeholder="Notify"-->
+				</form>
+			</div>
+		</div>
+
+		<script src="{% static 'js/slideshow.js' %}"></script>
+		<script src="{% static 'js/linkPages.js' %}"></script>
+		<script src="{% static 'js/header.js' %}"></script>
+		<script src="{% static 'js/formSubmittion.js' %}"></script>
+		<script src="{% static 'js/addToCart.js' %}"></script>
+		<script src="{% static 'js/addToWishlist.js' %}"></script>
+		<script src="{% static 'js/product-filter.js' %}"></script>
+	</body>
+</html>

@@ -1,0 +1,70 @@
+<table style="width:100%">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Total</th>
+    <th style="opacity:0;">line</th>
+  </tr>
+  
+  {% for product in products %}
+    <tr>
+      <td>  <div class="product"><img src="{{product.image1.url}}"></img><p>{{product.title}}</p></div></td>
+      <td class="items item-price"  data-value="{{product.final_price}}">Rs. {{product.final_price}}</td>
+      <td class="quantitybox">
+        <div class="add-to-cart">
+          <div class="quantity">
+              <div class="box quantity-count" id="quantity" data-id="{{product.id}}" >
+              {{forloop.counter}}
+              </div>
+            <div class="box add-item" onclick="add_item()" data-id2="{{product.id}}">
+            +
+          </div>
+          <div class="box remove-item" onclick="remove_item()">
+          -
+          </div>
+          </div>
+        </div>
+        </td>
+    <td class="items" >{{product.final_price}}</td>
+    <td><hr data-id={{product.id}} class="delete-from-cart"></td>
+    </tr>
+    {% endfor %}
+    <tr>
+      <th><h4>Extras</h4></th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th></th>
+    </tr>
+    {% for blouseobj in blouse %}
+    <tr>
+      <td>  <div class="product"><img src="{{blouseobj.image.url}}"></img><p>{{blouseobj.title}}</p></div></td>
+      <td class="items item-price"  data-value="{{blouseobj.price}}">Rs. {{blouseobj.price}}</td>
+      <td class="quantitybox">
+        <div class="add-to-cart">
+          <div class="quantity">
+              <div class="box quantity-count" id="quantity" data-id3="{{blouseobj.id}}" >
+              {{forloop.counter}}
+              </div>
+            <div class="box add-item" onclick="add_item()" data-id2="{{blouseobj.id}}">
+            +
+          </div>
+          <div class="box remove-item" onclick="remove_item()">
+          -
+          </div>
+          </div>
+        </div>
+        </td>
+    <td class="items" >{{blouseobj.price}}</td>
+    <td><hr data-id3={{blouseobj.id}} class="delete-extra-from-cart"></td>
+    </tr>
+    {% empty %}
+    <td><h4>Nothing to display here</h4></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    {% endfor %}
+  
+</table>

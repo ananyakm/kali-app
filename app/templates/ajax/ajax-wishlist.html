@@ -1,0 +1,19 @@
+<table style="width:100%">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+  </tr>
+  {% for product in products %}
+  <tr>
+    
+    <td><img class="table-image" src="{{product.image1.url}}"></img><p class="text">{{product.title}}</p></td>
+    <td class="others">Rs. {{product.final_price}}</td>
+    <td width="18%" class="others"><hr data-id={{product.id}} class="delete-from-wishlist"></td>
+    <td class="others"><button data-id={{product.id}} class="add-to-cart">Add to Cart</button></td>
+    
+  </tr>
+  {% endfor %}
+</table>
+

@@ -1,0 +1,32 @@
+
+	<div class="recommended-images" id="filteredProducts">
+		{% for saree in saree_obj %}
+		<div class="rec-imgs" >
+			<img 
+				src="{{ saree.image1.url }}"
+				alt=""
+			/>
+			<div class="img-overlay-text">
+				<div class="img-text ">{{ saree.title }}</div>
+				<div class="hidden-overlay ">
+					<div class="icon-buttons ">
+						<button type="button" id="addToWishlist" class="icon-btn " data-id="{{saree.id}}" >
+							<svg width="516" height="482" viewBox="0 0 516 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M257.987 66.9678C183.856 -21.168 20 21.0092 20 162.977C20 238.881 71.6682 293.983 121.595 337.381C134.05 348.207 146.763 358.599 158.901 368.52L159.626 369.112C172.077 379.29 183.864 388.939 194.657 398.432C216.663 417.785 232.308 434.639 239.945 450.623C243.267 457.574 250.286 462 257.991 462C265.695 462 272.715 457.574 276.037 450.623C283.674 434.639 299.319 417.786 321.327 398.432C332.121 388.94 343.909 379.291 356.361 369.113L357.09 368.517C369.227 358.597 381.94 348.207 394.395 337.382C444.326 293.984 496 238.882 496 162.977C496 21.1724 332.171 -21.3103 257.987 66.9678Z" stroke="white" stroke-width="40" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<button type="button" id="addToCart" class="icon-btn " data-id="{{saree.id}}" >
+							<svg width="432" height="512" viewBox="0 0 432 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M432 452C432 463.046 423.046 472 412 472H392V492C392 503.046 383.046 512 372 512C360.954 512 352 503.046 352 492V472H332C320.954 472 312 463.046 312 452C312 440.954 320.954 432 332 432H352V412C352 400.954 360.954 392 372 392C383.046 392 392 400.954 392 412V432H412C423.046 432 432 440.954 432 452ZM432 140V332C432 343.046 423.046 352 412 352C400.954 352 392 343.046 392 332V160H352V220C352 231.046 343.046 240 332 240C320.954 240 312 231.046 312 220V160H120V220C120 231.046 111.046 240 100 240C88.954 240 80 231.046 80 220V160H40V472H252C263.046 472 272 480.954 272 492C272 503.046 263.046 512 252 512H20C8.954 512 0 503.046 0 492V140C0 128.954 8.954 120 20 120H80.946C88.891 52.523 146.423 0 216 0C285.577 0 343.109 52.523 351.054 120H412C423.046 120 432 128.954 432 140ZM310.659 120C303.019 74.655 263.483 40 216 40C168.517 40 128.981 74.655 121.341 120H310.659Z" fill="white"/>
+							</svg>
+						</button>
+					</div>
+					<div class="hidden-text">{{ saree.title }}</div>
+					<button type="button" class="view-btn" onclick=window.location.href="{% url 'product' saree.id %}">View</button>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+

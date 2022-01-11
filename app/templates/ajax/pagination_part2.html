@@ -1,0 +1,11 @@
+<div class="pagination p1">
+  <ul>
+    {% for x in pages_range  %}
+    {% if page_obj.number == x %}
+    <a class="is-active" href="#"><li>{{x}}</li></a>
+    {% else %}
+    <a  href="#" class="pagination-link" onclick="return setPaginationPageNum()" ><li>{{x}}</li></a>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
