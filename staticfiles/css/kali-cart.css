@@ -1,0 +1,268 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  padding-bottom: 80px;
+}
+
+header {
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header #wishlist svg path {
+  stroke:#9A031E !important;
+}
+header #cart svg path {
+  fill:#9A031E !important;
+}
+header #menu svg path {
+  fill:#000 !important;
+}
+
+.wishlist{
+  width:100%;
+  height:110px;
+  margin-top:75px;
+  background:url('../img/Frame\ 16.png');
+	padding: 0 100px;
+}
+.wishlist h1{
+  font-family:'Lora',serif;
+  color:#554E44;
+  padding:3%;
+	padding-left:0;
+	font-weight: 600;
+}
+
+.wishlist h2{
+  font-family: 'Open Sans', sans-serif;
+  color:#554E44;
+  padding:3%;
+	padding-right: 0;
+	font-size: 16px;
+	font-weight: 550;
+}
+.headings{
+  display:flex;
+  justify-content:space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.main{
+  display:grid;
+  margin-top:80px;
+  grid-template-columns: 70% 30%;
+  padding-left:100px;
+  padding-right:100px;
+  margin-bottom:6%;
+}
+.div1{
+
+padding-right:4%;
+
+}
+
+.product{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+}
+.product > p{
+  margin-left: 20px;
+}
+.product img {
+  width: 17%;
+}
+
+
+hr{
+  border:none;
+  width:100%;
+  height:1px;
+  background:#808080;
+  grid-column:1/6;
+}
+#extras{
+  grid-column:1/6;
+}
+.redline{
+  background:red;
+  width:10px;
+}
+input[type=text]{
+margin-left:0;
+border: none;
+padding: 15px;
+width: 250px;
+}
+.apply {
+  height: 100%;
+  display: block;
+  padding: 15px;
+  background: transparent;
+  color: black;
+  border: none;
+}
+.update-cart{
+  padding:10px 35px;
+  border: 2px solid black;
+  background: transparent;
+  font-weight: 600;
+}
+.div2{
+  background-color:#F6F6F6;
+  padding:40PX;
+}
+.div2 > select{
+  background-color: #B8B8B8;
+  margin-bottom:10%;
+}
+.group-1{
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid black;
+  padding-bottom: 15px;
+}
+.group-1 h4 {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.80);
+  font-weight: 600;
+}
+.group-1:last-of-type {
+  border: none;
+}
+.group-2{
+  padding: 20px 0;
+  border-bottom:1px solid black;
+
+}
+.subgroup{
+  display:flex;
+  justify-content:space-between;
+
+}
+.subgroup > h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.across{
+  font-size: 22px;
+  height: auto;
+  margin-bottom: 25px;
+}
+.across:last-child {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+#checkout-btn{
+  background-color:#303030;
+  color:white;
+  border: none;
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 25px;
+
+}
+.coupon{
+  margin-top:60px;
+  display:flex;
+ justify-content:space-between;
+  align-items:center;
+}
+
+.coupon2{
+
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+}
+.coupon-container {
+  display:flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15 );
+}
+.add-to-cart{
+  display:flex;
+  justify-content: center;
+}
+.quantity{
+  display:grid;
+  grid-template-columns:60% 40%;
+  border:solid 1px black;
+}
+.box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.box:first-child{
+  grid-row:1/3;
+}
+.quantity-count{
+  width:50px;
+  height:50px;
+  margin-right:5px;
+}
+.add-item,.remove-item{
+  border-left:0.1px solid black;
+  border-bottom:0.1px solid black;
+}
+.items{
+  text-align:center;
+}
+hr{
+  border:none;
+  width:35%;
+  height:2px;
+  background:#9A031E;
+}
+th{
+  padding-bottom:20px;
+
+}
+td{
+  padding: 0 15px;
+  padding-top:25px ;
+}
+td:last-of-type {
+  padding-left: 0;
+  padding-right: 0;
+}
+/* .quantitybox{
+
+} */
+
+table {
+  border-collapse: collapse;
+  table-layout: auto;
+}
+table tr:first-child {
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+#slct1 {
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+button.update-cart{
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(0,0,0,0);
+  color: #292929;
+  border: 3px solid #292929;
+  padding: 10px 20px;
+}
+
+button:hover.update-cart{
+  color: #ffffff;
+  background: #292929;
+}

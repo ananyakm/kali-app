@@ -1,0 +1,110 @@
+@media only screen and (max-width:1366px){
+  .main{
+    display:grid;
+    margin-top:80px;
+    grid-template-columns:70% 30%;
+    padding-left:80px;
+    padding-right:80px;
+  }
+}
+@media only screen and (max-width:768px){
+  .main{
+    display:grid;
+    margin-top:80px;
+    grid-template-columns:1fr;
+    padding-left:50px;
+    padding-right:50px;
+  }
+  .quantity-count{
+    width:30px;
+    height:30px;
+    margin-right:5px;
+  }
+  .div1{
+
+  margin-bottom:10%;
+
+  }
+  .div2{
+    margin-top:20%;
+  }
+
+
+  .wishlist h1{
+    font-style:'Lora',serif;
+    color:#554E44;
+    padding:8%;
+    padding-left:7.5%;
+      font-size:28px;
+
+  }
+
+  .wishlist h2{
+    font-style:'Lora',serif;
+    color:#554E44;
+      padding:10%;
+      font-size:17px;
+  }
+  .wishlist{
+    padding:0 3px;
+  }
+  .headings{
+    display:flex;
+    justify-content:space-between;
+  }
+
+}
+@media only screen and (max-width:426px){
+  .main{
+    display:grid;
+    margin-top:80px;
+    grid-template-columns:1fr;
+    padding-left:20px;
+    padding-right:20px;
+
+  }
+  .wishlist h1{
+    font-style:'Lora',serif;
+    color:#554E44;
+    padding:8%;
+    padding-left:7.5%;
+      font-size:28px;
+
+  }
+
+  .wishlist h2{
+    font-style:'Lora',serif;
+    color:#554E44;
+      padding:8%;
+      font-size:15px;
+  }
+  .wishlist{
+    padding:0 3px;
+
+  }
+  .headings{
+    display:flex;
+    justify-content:space-between;
+  }
+  .product > p{
+    margin-left: 12px;
+    font-size: 11px;
+  }
+  .items{
+    font-size:11px;
+  }
+  th{
+    font-size:13px;
+    padding-bottom:12px;
+  }
+  .coupon2{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .coupon-container{
+    margin-bottom:20px;
+  }
+  .product img{
+    width:35px;
+  }
+}

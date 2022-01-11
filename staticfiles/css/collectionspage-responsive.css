@@ -1,0 +1,217 @@
+@media only screen and (max-width: 900px) {
+  .header-part-2 h1 {
+    font-size: 24px;
+    padding: 4%;
+    padding-left: 0 !important;
+  }
+  .filter-section-hide{
+    display: none;
+  }
+  .header-part-2 {
+    height: auto;
+  }
+  .header-part-2 h2 {
+    font-size: 12px;
+  }
+  .section-header span {
+    font-size: 12px;
+  }
+  .main-body{
+    display: grid;
+    grid-template-columns:  100%;
+    padding-left:80px;
+    padding-right: 80px;
+  }
+  .saree-section{
+    padding-left: 0;
+  }
+  .filter-hide{
+    opacity: 1;
+  }
+  .section-header:nth-last-child(2){
+    align-self: flex-end;
+  }
+  .modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: auto 0;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .filter-section-modal{
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    width: 50%;
+
+    margin: auto;
+    padding: 30px 30px;
+  }
+  .filter-price {
+    padding: 20px 0;
+  }
+  button.close-modal{
+    justify-content: end;
+    position: absolute;
+    right: calc(25% + 30px);
+    background-color: rgb(0, 0, 0,0);
+    border: none;
+  }
+  button.close-modal img{
+    width: 15px;
+  }
+  .filter-section span{
+    font-size: 14px;
+    font-weight: 700;
+
+  }
+  .checkmark {
+    height: 15px;
+    width: 15px;
+  }
+  .container {
+    margin-top: 12px;
+    font-size: 12px;
+    padding-left: 25px;
+  }
+
+  .container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 2px;
+    height: 8px;
+  }
+
+  button.filter-btn{
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+  .tags button.filter-btn {
+    font-size: 10px;
+  }
+  .section-header select, option {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  .recommendations {
+    margin-top: 30px;
+  }
+  .btn-container button.filter-btn{
+    margin-right: 10px;
+  }
+  button.tag-btn{
+    border-radius: 20px;
+    margin-right: 5px;
+  }
+  .img-text {
+    font-size: 14px;
+    padding-bottom: 25px;
+	}
+	.hidden-overlay {
+    padding-bottom: 25px;
+	}
+	.hidden-text {
+		font-size: 14px;
+	}
+  .recommended-images {
+    gap:15px;
+  }
+
+}
+@media only screen and (max-width: 800px) {
+  /* .hidden-overlay  {
+    display: none;
+  } */
+  .img-overlay-text:hover{
+    background: linear-gradient(178.74deg, rgba(255, 255, 255, 0) 50%, rgba(214, 214, 214, 0.161457) 61.96%, rgba(167, 167, 167, 0.343952) 67.08%, rgba(108, 108, 108, 0.57714) 73.63%, rgba(70, 70, 70, 0.726785) 81.32%, rgba(40, 40, 40, 0.84375) 91.85%, #000000 104.66%);
+  }
+  /* .img-text:hover{
+    opacity: 1;
+  } */
+}
+@media only screen and (max-width: 700px) {
+  .recommended-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .headings {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px 0;
+  }
+  .header-part-2 h2 {
+    padding: 0;
+  }
+  .header-part-2 h1 {
+    padding: 0;
+    margin-bottom: 5px;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .section-header>div {
+    margin-top: 15px;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  button.close-modal {
+    right: calc(10% + 30px);
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .main-body{
+    padding-left:20px;
+    padding-right: 20px;
+  }
+  .recommended-images{
+    gap: 10px;
+  }
+  .img-text {
+    font-size: 14px;
+    padding-bottom: 25px;
+	}
+	.hidden-overlay {
+    padding-bottom: 25px;
+	}
+	.hidden-text {
+		font-size: 14px;
+	}
+  .icon-btn> svg{
+    width: 12px;
+    height: 12px;
+  }
+  button.view-btn{
+    margin-top: 10px;
+    padding: 4px 10px;
+  }
+  .p1 a{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+
+  .dropdown-btn img{
+    margin-left: 0px;
+  }
+}
